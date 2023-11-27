@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOCUS</title>
-    <link rel="stylesheet" href="/src/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="src/main.js"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="src/style.css">
+    
+  
 </head>
 <body>
     <div class="bones">
@@ -24,20 +26,45 @@
                 </div> <!--bg-hero-->
                     
                 <div id="pomodoro">
-                    
+
                     <div id="i-pomodoro-overlay">
                         <img src="src/icon/Mini balls.gif" alt="gif de spinner">
+                    </div> <!--#i-pomodoro-overlay-->
+
+                    <span class="btn-icon" id="btn-icon__Config">
+                        <i class="material-symbols-outlined" id="btn-iConfig">settings</i>
+                            <!--img src="src/icon/iconConfig.svg" alt="icone de confirguração"-->
+                    </span>
+
+                    <div id="i-timer-progress">
+
+
+                        <svg class="svg-icon-Circle" viewBox="0 0 100 100">
+
+                            <path fill="none" d="M9.875,0.625C4.697,0.625,0.5,4.822,0.5,10s4.197,9.375,9.375,9.375S19.25,15.178,19.25,10S15.053,0.625,9.875,0.625"></path>
+                            <circle cx="50" cy="50" r="45" class="circle-background"></circle>
+                            <circle cx="50" cy="50" r="45" class="circle-progress"></circle>
+                            <text id="i-timer-time" x="50" y="50" text-anchor="middle" dy=".3em" font-size="18">25:00</text>
+                            <text id="i-timer-pause" x="50" y="68" text-anchor="middle" dy=".3em" font-size="7">Pausa:</text>
+                            <text id="i-timer-rest" x="50" y="68" text-anchor="middle" dy=".3em" font-size="7">Recomeçar</text>
+						</svg>
+                    </div> <!--#i-timer-progress-->
+
+
+                    <div id="i-timer-sessions">
+                        <p id="timer-completed-label">Sessões concluídas:</p>
+                        <p id="timer-completed-sessions">0</p>
                     </div>
-
-                    <span class="btn-icon" id="fa-solid fa-gear"><i class="fa-solid fa-gear"></i></span>
-
-                    <div id="i-timer-progress"></div>
-                    <div id="i-timer-sessions"></div>
 
                     <div id="i-timer-functions">
 
                         <div id="i-timer-settings"></div>
-                        <div id="i-timer-buttons"></div>
+
+                        <div id="i-timer-buttons">
+                            <button id="pause-btn"><i class="material-symbols-outlined">pause</i></button>
+                            <button id="start-btn"><i class="material-symbols-outlined">play_arrow</i></button>
+                        </div>
+                            </span>
 
                     </div> <!-- #i-timer-fuctions-->
 
@@ -59,6 +86,6 @@
         <footer>
         </footer> 
     </div> <!--bones-->
-
+    <script src="src/main.js"></script> 
 </body>
 </html>

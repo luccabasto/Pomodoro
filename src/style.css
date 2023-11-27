@@ -1,5 +1,10 @@
 @import url(reset.css);
 
+:root{
+    --transition-lead: all 0.3s ease-in-out;
+    --border-radius: 14px;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     /*display: flex;
@@ -26,8 +31,9 @@ div #bg-hero img{
     height: 100%;
 
     position: absolute;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
+/* Pomodoro-div*/
 
 #pomodoro{
 
@@ -38,7 +44,7 @@ div #bg-hero img{
     max-width: 180px;
 
     margin: 0 auto;
-    padding: 15px 15px 25px 30px;
+    padding: 25px 30px 25px 30px;
     top: 65vh;
 
     background: rgba(255, 255, 255, 0.29);
@@ -47,6 +53,8 @@ div #bg-hero img{
     -webkit-backdrop-filter: blur(6.5px);
     border: 1px solid rgba(255, 255, 255, 0.64);
 }
+
+/*** Overlay-div ***/
 
 #i-pomodoro-overlay{
 
@@ -74,3 +82,127 @@ body.page-loaded #i-pomodoro-overlay{
     width: 28px;
     height: 28px;
 }
+
+/*** Generic button + toggle button ***/
+
+.btn-icon{
+    border-radius: 14px;
+    position: absolute;
+    right: 0;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}
+
+#btn-iConfig{
+    color: black;
+    position: relative;
+    top: -15px;
+    right: 20px;
+    height: 50px;
+    font-size: 20px;
+}
+
+    /* Progress*/
+
+#i-timer-progress{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+    .svg-icon-Circle{
+        width: 250px;
+        height: 250px;
+    }
+        .circle-background{
+            stroke: white;
+            stroke-width: 7;
+            fill: none;
+        }
+
+        .circle-progress{
+            stroke: red;
+            stroke-width: 7;
+            stroke-linecap: round;
+            stroke-dasharray: 283;
+            fill: none;
+            transform-origin: 50% 50%;
+            transform: rotate(-90deg);
+        }
+
+        #i-timer-time{
+            fill: #5c5c5c;
+        }
+
+            #i-timer-pause,
+            #i-timer-rest {
+                opacity: 0;
+                transition: var(--transition-lead);
+                fill: #5c5c5c;
+                
+            }
+
+/* Timer-sessions-div*/
+
+#i-timer-sessions{
+    border-radius: 50px;
+    background-color: #fff;
+    display: flex;
+    color: #5c5c5cb8;
+    align-items: center;
+    transition: var(--transition-lead);
+}
+
+    #i-timer-sessions p{
+        padding: 15px;
+        font-size: 12px;
+}
+
+    #timer-completed-label{
+        width: 90%;
+        text-align: center;
+    }
+
+    p#timer-completed-sessions{
+        font-weight: bold;
+        color: #222;
+        font-size: 20px;
+        }
+
+/*Functions no CSS*/
+
+#i-timer-functions{
+    border: 1px solid red;
+    position: relative;
+    height: 90px;
+}
+
+    /*Play e Pausa - Buttons*/
+
+    #i-timer-buttons{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: var(--transition-lead);
+    }
+
+    #i-timer-buttons button{
+        background-color: red;
+        position: absolute;
+        border: 0px none;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        display: block;
+        font-size: 30px;
+        color: #fff;
+        border-radius: 100px;
+
+    }
