@@ -58,7 +58,23 @@
 
                     <div id="i-timer-functions">
 
-                        <div id="i-timer-settings"></div>
+                        <div id="i-timer-settings">
+                            <span class="btn-icon" id="i-close-settings"><i class="material-symbols-outlined">close</i></span>
+
+                            <form id="element-timer-form">
+
+                                <p class="element-timer-line">
+                                    <label for="work-duration">Pomodoro: </label>
+                                    <input type="number" id="work-duration" value="25" min="1">
+                                </p> <!-- .element-timer-line-->
+                                
+                                <p class="element-timer-line">
+                                    <label for="rest-duration">Recomeçar: </label>
+                                    <input type="number" id="rest-duration" value="5" min="1">
+                                </p> <!-- .element-timer-line-->
+
+                            </form>
+                        </div> <!-- #i-timer-settings -->
 
                         <div id="i-timer-buttons">
                             <button id="pause-btn"><i class="material-symbols-outlined">pause</i></button>
