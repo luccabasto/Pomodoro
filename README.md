@@ -18,3 +18,5 @@ Indice:
 
 3 - Vinculando a ídeia a alguma diretriz da ODS3, explicando a ídeia por trás. 
 4 - N° de RM's 
+
+        iBody.classList.toggle('settings-active') ? iBody.classList.remove('settings-active') : iBody.classList.add('settings-active');

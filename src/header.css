@@ -1,0 +1,41 @@
+nav{
+    height: 70px;
+    width: 100%;
+
+}
+
+.logo{
+    color: var(--color-4st);
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+}
+.logo-img{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+.nav-iten{
+    color: var(--color-3st);
+    font-weight: 550;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+.nav-iten:hover{
+    color: var(--color-1st);
+    background-color: var(--color-4st);
+    transition: .5s;
+}
