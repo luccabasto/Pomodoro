@@ -1,6 +1,13 @@
 nav{
-    height: 70px;
+    height: 4.95em;
     width: 100%;
+    border: 1px solid #DCF2F0;;
+    background-color:#FFF2F2;
+    color: black;
+    list-style: none;
+    text-decoration: none;
+    transition: all ease-in-out .5s;
+    overflow: hidden;
 
 }
 
@@ -14,24 +21,32 @@ nav{
     width: 70px;
     height: 70px;
     margin: 10px;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    
 }
 
 nav ul{
     float: right;
     margin-right: 20px;
+    
 }
 nav ul li{
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
+    
 }
 .nav-iten{
-    color: var(--color-3st);
+    color:#D96A6A;
     font-weight: 550;
     font-size: 18px;
     text-transform: uppercase;
     padding: 7px 13px;
     border-radius: 3px;
+    text-decoration: none;
 }
 
 .nav-iten:hover{

@@ -1,0 +1,314 @@
+#focus__pomodoro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+#bg-hero img{
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+body.rest-mode #bg-hero img{
+    filter: blur(5px) grayscale(0.6) brightness(0.5);
+}
+body.rest-mode .circle-progress{
+    stroke: #fd525385;
+}
+
+body.timer-running .circle-progress {
+    transition: all 1s linear;
+}
+/* Pomodoro-div*/
+
+#pomodoro{
+
+    border-radius: 14px;
+    position: relative;
+
+    
+    width: 100%;
+    max-width: 320px;
+    height: 485px;
+    
+
+    margin: 0 auto;
+    padding: 25px 30px 25px 30px;
+    top: 3.5em;
+
+    background: rgba(255, 255, 255, 0.29);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border: 1px solid rgba(255, 255, 255, 0.64);
+}
+
+/*** Overlay-div ***/
+
+#i-pomodoro-overlay{
+
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    border-radius: 14px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+body.page-loaded #i-pomodoro-overlay{
+    opacity: 0;
+    visibility: hidden;
+}
+
+#i-pomodoro-overlay img{
+    width: 28px;
+    height: 28px;
+}
+
+/*** Generic button + toggle button ***/
+
+.btn-icon{
+    border-radius: 14px;
+    position: absolute;
+    right: 0;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}
+
+#btn-iConfig{
+    color: black;
+    position: relative;
+    top: -15px;
+    right: 20px;
+    height: 50px;
+    font-size: 20px;
+}
+
+    /* Progress*/
+
+#i-timer-progress{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+    .svg-icon-Circle{
+        width: 250px;
+        height: 250px;
+    }
+        .circle-background{
+            stroke: white;
+            stroke-width: 7;
+            fill: none;
+        }
+
+        .circle-progress{
+            stroke: red;
+            stroke-width: 7;
+            stroke-linecap: round;
+            stroke-dasharray: 283;
+            fill: none;
+            transform-origin: 50% 50%;
+            transform: rotate(-90deg);
+        }
+
+        #i-timer-time{
+            fill: #5c5c5c;
+        }
+
+            #i-timer-pause,
+            #i-timer-rest {
+                opacity: 0;
+                transition: var(--transition-lead);
+                fill: #5c5c5c;
+                
+            }
+
+body.settings-active #i-timer-settings {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.settings-active #i-timer-sessions,
+body.settings-active #i-timer-buttons {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Timer-sessions-div*/
+
+#i-timer-sessions{
+    border-radius: 50px;
+    background-color: #fff;
+    display: flex;
+    color: #5c5c5cb8;
+    align-items: center;
+    transition: var(--transition-lead);
+}
+
+    #i-timer-sessions p{
+        padding: 15px;
+        font-size: 12px;
+}
+
+    #timer-completed-label{
+        width: 90%;
+        text-align: center;
+    }
+
+    p#timer-completed-sessions{
+        font-weight: bold;
+        color: #222;
+        font-size: 20px;
+        }
+
+/*Functions no CSS*/
+
+#i-timer-functions{
+    position: relative;
+    height: 90px;
+}
+
+    /*Configurações*/
+    #i-timer-settings{
+        opacity: 0;
+        transition: var(--transition-lead);
+        visibility: hidden;
+       
+        
+    }
+
+        #i-close-settings{
+            top: -45px;
+            height: 88px;
+            background: #d85e3a;
+            color: #f7ddd7;
+        }
+
+        #i-close-settings:hover{
+            color: black;
+        }
+
+        #element-timer-form{
+            border-radius: 20px;
+            position: absolute;
+            bottom: 10;
+            left: 0;
+            width: auto;
+           
+            background: #d85e3a;
+            padding: 15px;
+            z-index: 1;
+        }
+
+            .element-timer-line{
+                display: flex;
+            }
+            .element-timer-line:last-child{
+                margin-top: 20px;
+            }
+
+            .element-timer-line label{
+                width: 50%;
+                color: #5c5c5c;
+                padding: 10px 0 10px 0;
+            }
+
+            .element-timer-line input{
+                width: 20%;
+                color: #5c5c5c;
+                background: #fff;
+                margin-left:  -2px;
+                border-radius: 10px;
+                border: 0 none;
+                text-align: center;
+            }
+
+            #element-timer-form input::-webkit-inner-spin-button,
+            #element-timer-form input::-webkit-outer-spin-button{
+                -webkit-appearance: none;
+            }
+
+            #element-timer-form input[type=number] {
+                -moz-appearance: textfield;
+            }
+
+    /*Play e Pausa - Buttons*/
+
+    #i-timer-buttons{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: var(--transition-lead);
+    }
+
+    #i-timer-buttons button{
+        background-color: red;
+        position: absolute;
+        border: 0px none;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        display: block;
+        font-size: 30px;
+        color: #fff;
+        border-radius: 100px;
+
+    }
+    
+    body.timer-runnig #start-btn{
+
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    
+    body.timer-paused #start-btn{
+
+        opacity: 1;
+        visibility: visible;
+    }
+
+    body.timer-running #pause-btn{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /*Timer inner text*/
+
+    body.timer-paused:not(.rest-mode) #i-timer-pause,
+    body.rest-mode #i-timer-rest,
+    body.rest-mode.timer-paused #i-timer-text{
+        opacity: 1;
+
+    }
+    body.rest-mode.timer-paused #i-timer-rest{
+        opacity: 0 ;
+    }
+
+
+    
+    
+

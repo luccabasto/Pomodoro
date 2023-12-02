@@ -1,0 +1,36 @@
+#grupo-page {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    width: 100vw;
+    margin: 0;
+    background-color: #302B5A;
+    overflow-x: hidden;
+
+}
+
+.profile {
+    text-align: center;
+    margin: 20px;
+}
+
+.profile a{
+    text-decoration: none;
+    color: black;
+}
+
+.profile img {
+    border: 5px solid #A66E4E; 
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile p {
+    margin: 0;
+    font-size: 2em; 
+}

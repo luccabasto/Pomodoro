@@ -33,8 +33,7 @@
     const startBtn = document.getElementById('start-btn');
     startBtn.addEventListener('click', () => {
 
-        pauseBtn.classList.remove('hidden');
-
+        
         isPaused = false;
 
         iBody.classList.add('timer-running');
@@ -110,9 +109,9 @@
     function updateTimer(){
 
         let playAlarm;
-        // const workFinished = new Audio ("");
+        const workFinished = new Audio ("sounds/sucess-audio.mp3");
         //Adicionar áudios posteriormente. 
-        // const restFinished = new Audio ("");
+        const restFinished = new Audio ("sounds/erro-audio.mp3");
 
 
         if(!isPaused) {
