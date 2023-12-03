@@ -1,4 +1,4 @@
-## Desenolvendo POMODORO 
+## Desenolvendo POMODORO === FINALIZADO 
 
         Utilizando: CSS & JavaScript 
 
@@ -10,8 +10,7 @@ Indice:
     1.2 - Criar Header. 
     1.3 - Footer.
 
-    ----Extra 
-    1.4 - Vincular uma lista TO DO ao projeto.
+
 2- Estudo de caso 
 
 ------Exclusivo para entrega da GS:
@@ -19,7 +18,7 @@ Indice:
 3 - Vinculando a ídeia a alguma diretriz da ODS3, explicando a ídeia por trás. 
 4 - N° de RM's 
 
-        iBody.classList.toggle('settings-active') ? iBody.classList.remove('settings-active') : iBody.classList.add('settings-active');
+        
 
 ColorPalet:
 #F28972 
@@ -46,5 +45,4 @@ ColorPalet:
 .Comm-Skills-#F28972-4-hsla { color: hsla(11, 70, 82, 1); }
 .Comm-Skills-#F28972-5-hsla { color: hsla(5, 95, 48, 1); }
 
-<img src="src/img/bg-Pomodoro-Productivitypng.png" alt="imagem de representação do pomodoro" class="Pomodoro-bg">
 

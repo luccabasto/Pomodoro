@@ -22,6 +22,7 @@ body.rest-mode #bg-hero img{
 }
 body.rest-mode .circle-progress{
     stroke: #fd525385;
+    transition: all 1s linear;
 }
 
 body.timer-running .circle-progress {
@@ -135,11 +136,11 @@ body.page-loaded #i-pomodoro-overlay{
             fill: #5c5c5c;
         }
 
-            #i-timer-pause,
+            #i-timer-paused,
             #i-timer-rest {
                 opacity: 0;
                 transition: var(--transition-lead);
-                fill: #5c5c5c;
+                fill: white;
                 
             }
 
@@ -278,18 +279,14 @@ body.settings-active #i-timer-buttons {
 
     }
     
-    body.timer-runnig #start-btn{
+    body.timer-running #start-btn{
 
         opacity: 0;
         visibility: hidden;
     }
 
     
-    body.timer-paused #start-btn{
 
-        opacity: 1;
-        visibility: visible;
-    }
 
     body.timer-running #pause-btn{
         opacity: 1;
@@ -298,15 +295,29 @@ body.settings-active #i-timer-buttons {
 
     /*Timer inner text*/
 
-    body.timer-paused:not(.rest-mode) #i-timer-pause,
-    body.rest-mode #i-timer-rest,
-    body.rest-mode.timer-paused #i-timer-text{
-        opacity: 1;
+   
+    body.timer-running #i-timer-paused{
+        opacity: 0;
+    }
 
+    body.timer-running.timer-paused #i-timer-paused{
+        opacity: 0;
     }
+            /* timer-paused */
+        
+    body.timer-paused #i-timer-paused{
+            opacity: 1;
+        }
+
+            /* rest-mode config */
+
     body.rest-mode.timer-paused #i-timer-rest{
-        opacity: 0 ;
-    }
+        opacity: 1 ;
+        }
+
+    body.rest-mode.timer-paused #i-timer-paused{
+        opacity: 0;
+        }
 
 
     

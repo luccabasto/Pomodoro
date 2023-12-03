@@ -14,6 +14,7 @@
     let isWorking = true;
     let intervalID;
 
+
     const completedSessionsElement = document.getElementById('timer-completed-sessions');
     let completedSessions = 0;
 
@@ -27,13 +28,12 @@
         restDuration = parseInt(restDurationInput.value) * 60;
     });
 
-
+    
     /** button Começar */
 
     const startBtn = document.getElementById('start-btn');
     startBtn.addEventListener('click', () => {
 
-        
         isPaused = false;
 
         iBody.classList.add('timer-running');
@@ -44,23 +44,34 @@
         else{
             iBody.classList.add('rest-mode');
             iBody.classList.add('timer-paused');
+
         }
 
         if(!intervalID) {
             intervalID = setInterval(updateTimer, 1000);
         }
-
-        
+  
     });
 
-    /** Pause button -- manutenção */ 
+    
+    /** Pause button */ 
 
     const pauseBtn = document.getElementById('pause-btn');
     pauseBtn.addEventListener('click', () => {
-        isPaused = true;
+
+        isPaused = !isPaused;
+        
+       if(isPaused){
 
         iBody.classList.remove('timer-running');
         iBody.classList.add('timer-paused');
+
+       }
+
+       else{
+        iBody.classList.remove('timer-paused');
+        iBody.classList.add('timer-running');
+       }
     });
 
     /** Settings **/
@@ -109,9 +120,9 @@
     function updateTimer(){
 
         let playAlarm;
-        const workFinished = new Audio ("sounds/sucess-audio.mp3");
+        const workFinished = new Audio ("src/sounds/sucess-audio.wav");
         //Adicionar áudios posteriormente. 
-        const restFinished = new Audio ("sounds/erro-audio.mp3");
+        const restFinished = new Audio ("src/sounds/erro-audio.wav");
 
 
         if(!isPaused) {
